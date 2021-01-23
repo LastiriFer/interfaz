@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="529dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="-18dp"
+            android:layout_marginBottom="80dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/voltext"
+                android:layout_width="402dp"
+                android:layout_height="373dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="27dp"
+                android:layout_marginBottom="132dp"
+                android:paddingTop="10dp"
+                android:text="Voltmetro"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <pl.pawelkleczkowski.customgauge.CustomGauge
+                android:id="@+id/voltmetro"
+                android:layout_width="295dp"
+                android:layout_height="263dp"
+
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="80dp"
+                android:layout_marginBottom="182dp"
+                android:padding="10dp"
+                app:gaugeEndValue="100"
+                app:gaugePointEndColor="@color/purple_700"
+                app:gaugePointStartColor="@color/teal_700"
+                app:gaugeStartAngle="135"
+                app:gaugeStartValue="0"
+                app:gaugeStrokeCap="ROUND"
+                app:gaugeStrokeColor="@color/grey"
+                app:gaugeStrokeWidth="10dp"
+                app:gaugeSweepAngle="270">
+
+            </pl.pawelkleczkowski.customgauge.CustomGauge>
+
+            <TextView
+                android:id="@+id/valor"
+                android:layout_width="208dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="115dp"
+                android:layout_marginBottom="185dp"
+                android:paddingTop="45dp"
+                android:text="Volts:"
+                android:textAlignment="center"
+                android:textSize="30dp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <EditText
+                android:id="@+id/entrada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="202dp"
+                android:layout_marginBottom="44dp"
+                android:ems="10"
+                android:inputType="number" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="69dp"
+                android:layout_marginBottom="47dp"
+                android:text="Establece" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
